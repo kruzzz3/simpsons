@@ -1,13 +1,17 @@
-<h1>Staffel</h1>
+<div class="sub_navigation">
+	<%= link_to(image_tag("icon_back.png", :class => 'image-link') + raw('<span class="text">Zurück</span>'), '/seasons/') %>
+	<span class="spacer">|</span>
+	<%= link_to(image_tag("icon_edit.png", :class => 'image-link') + raw('<span class="text">Bearbeiten</span>'), '/seasons/' + @season.id.to_s + '/edit') %> 
+</div>
+<div class="content">
+	<h1>Staffel</h1>
 
-<% if notice %>
-<p class="notice"><%= notice %></p>
-<% end %>
+	<% if notice %>
+		<p class="notice"><%= notice %></p>
+	<% end %>
 
-<p>
-  <strong> Nummer:</strong>
-  <%= @season.number %>
-</p>
-
-<%= link_to 'Bearbeiten', edit_season_path(@season) %> |
-<%= link_to 'Zurück', seasons_path %>
+	<p>
+	  <strong> Nummer:</strong>
+	  <%= @season.number %>
+	</p>
+</div>

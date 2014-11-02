@@ -1,5 +1,8 @@
-<h1>Neue Staffel</h1>
+<div class="sub_navigation">
+  <%= link_to(image_tag("icon_back.png", :class => 'image-link') + raw('<span class="text">Zurück</span>'), '/seasons/') %>
+</div>
+<div class="content">
+	<h1>Neue Staffel</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Zurück', seasons_path %>
+	<%= render 'form' %>
+</div>

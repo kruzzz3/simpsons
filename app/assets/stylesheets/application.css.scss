@@ -42,6 +42,10 @@ body {
 
 }
 
+.content {
+	margin: 0px 5px;
+}
+
 h1 {
 	margin-bottom: 20px;
 	font-size: 26px;
@@ -75,17 +79,36 @@ a span {
 	color: #333333;
 }
 
+.spacer {
+	margin: 0px 5px;
+}
+
 
 .notice {
 	width: 100%;
-	background-color: #666666;
-	padding: 5px;
-	margin: 20px 0px;
+	background-color: #77b55a;
+	padding: 10px 5px;
+	margin: 0px -5px;
+	margin-bottom: 20px;
 	color: #ffffff;
 }
 
+.error {
+	width: 100%;
+	background-color: #e4685d;
+	padding: 10px 5px;
+	margin: 0px -5px;
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+
+.field_with_errors {
+	padding: 2px;
+	background-color: #e4685d;
+}
+
 .sub_navigation {
-	background-color: #666666;
+	background-color: #599bb3;
 	color: #ffffff;
 	padding: 5px;
 	margin: 0px 0px 20px 0px;
@@ -93,7 +116,7 @@ a span {
 
 .table {
 	width: 100%;
-	border: solid 1px #999999;
+	border: solid 1px #eeeeee;
 	border-collapse: collapse;
 }
 .table .title{
@@ -101,10 +124,40 @@ a span {
 	font-weight: bold;
 }
 .table td {
-	border: solid 1px #999999;
+	border: solid 1px #eeeeee;
 	padding: 2px;
 }
 
 .table td.max {
 	width: 100%;
+}
+
+.form-table input {
+	width: 100%;
+}
+
+.form-table-actions {
+	margin-top: 20px;
+}
+
+.button {
+	background-color:#599bb3;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+	border-radius:25px;
+	border:5px solid #29668f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:18px;
+	padding:5px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 10px #3d768a;
+}
+.button:hover {
+	background-color:#408c99;
+}
+.button:active {
+	position:relative;
+	top:1px;
 }

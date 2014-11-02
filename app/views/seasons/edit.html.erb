@@ -1,6 +1,10 @@
-<h1>Staffel bearbeiten</h1>
+<div class="sub_navigation">
+	<%= link_to(image_tag("icon_back.png", :class => 'image-link') + raw('<span class="text">Zurück</span>'), '/seasons/') %>
+	<span class="spacer">|</span>
+	<%= link_to(image_tag("icon_show.png", :class => 'image-link') + raw('<span class="text">Anzeigen</span>'), '/seasons/' + @season.id.to_s) %> 
+</div>
+<div class="content">
+	<h1>Staffel bearbeiten</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Anzeigen', @season %> |
-<%= link_to 'Zurück', seasons_path %>
+	<%= render 'form' %>
+</div>

@@ -1,23 +1,23 @@
 <%= form_for(@season) do |f| %>
   <% if @season.errors.any? %>
-    <div class="error_explanation">
+    <div class="error">
       <h2><%= @season.errors.count %> Fehler gefunden:</h2>
 
       <ul>
       <% @season.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <li>- <%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <table class="form_table">
+  <table class="table form-table">
     <tr>
       <td>Nummer:</td>
-      <td><%= f.number_field :number %></td>
+      <td class="max"><%= f.number_field :number %></td>
     </tr>
   </table>
-  <div class="actions">
-    <%= f.submit "Speichern" %>
+  <div class="form-table-actions">
+    <%= f.submit "Speichern", :class => 'button' %>
   </div>
 <% end %>
