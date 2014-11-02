@@ -1,0 +1,13 @@
+<h1>Staffel</h1>
+
+<% if notice %>
+<p class="notice"><%= notice %></p>
+<% end %>
+
+<p>
+  <strong> Nummer:</strong>
+  <%= @season.number %>
+</p>
+
+<%= link_to 'Bearbeiten', edit_season_path(@season) %> |
+<%= link_to 'Zurück', seasons_path %>

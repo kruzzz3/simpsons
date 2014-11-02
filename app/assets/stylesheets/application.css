@@ -1,0 +1,110 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), font-url('lato-light.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), font-url('lato-regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), font-url('lato-bold.woff') format('woff');
+}
+
+* {
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+
+}
+
+h1 {
+	margin-bottom: 20px;
+	font-size: 26px;
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+}
+
+a img {
+	height: 14px;
+	margin-top: 2px;
+	margin-right: 4px;
+}
+
+a img.max {
+	height: 26px;
+	margin: 2px;
+}
+
+a span {
+	line-height: 16px;
+}
+
+.text {
+	color: #ffffff;
+}
+
+.text-inv {
+	color: #333333;
+}
+
+
+.notice {
+	width: 100%;
+	background-color: #666666;
+	padding: 5px;
+	margin: 20px 0px;
+	color: #ffffff;
+}
+
+.sub_navigation {
+	background-color: #666666;
+	color: #ffffff;
+	padding: 5px;
+	margin: 0px 0px 20px 0px;
+}
+
+.table {
+	width: 100%;
+	border: solid 1px #999999;
+	border-collapse: collapse;
+}
+.table .title{
+	font-size: 18px;
+	font-weight: bold;
+}
+.table td {
+	border: solid 1px #999999;
+	padding: 2px;
+}
+
+.table td.max {
+	width: 100%;
+}

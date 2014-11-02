@@ -1,0 +1,31 @@
+<div class="sub_navigation">
+  <%= link_to(image_tag("icon_new.png", :class => 'image-link') + raw('<span class="text">Neue Staffel</span>'), '/seasons/new') %>
+</div>
+
+<h1>Alle Staffeln</h1>
+
+<table class="table">
+  <thead>
+    <tr class="title">
+      <td align="left">Nummer:</td>
+      <td align="center"></td>
+      <td align="center"></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @seasons.each do |season| %>
+      <tr>
+        <td align="left" class="max"><%= season.number %></td>
+        <td align="center">
+          <%= link_to(image_tag("icon_show_inv.png", :class => 'max'), '/seasons/' + season.id.to_s) %>
+        </td>
+        <td align="center">
+          <%= link_to(image_tag("icon_edit_inv.png", :class => 'max'), '/seasons/' + season.id.to_s + '/edit') %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
