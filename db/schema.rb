@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20141102160424) do
   end
 
   create_table "episodes", force: true do |t|
-    t.integer  "seasons_id"
+    t.integer  "season_id"
     t.string   "title"
     t.integer  "number"
     t.integer  "sort"

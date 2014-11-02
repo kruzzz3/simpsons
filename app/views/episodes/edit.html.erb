@@ -1,0 +1,10 @@
+<div class="sub_navigation">
+	<%= link_to(image_tag("icon_back.png", :class => 'image-link') + raw('<span class="text">Zurück</span>'), '/admin/episodes/') %>
+	<span class="spacer">|</span>
+	<%= link_to(image_tag("icon_show.png", :class => 'image-link') + raw('<span class="text">Anzeigen</span>'), '/admin/episodes/' + @episode.id.to_s) %> 
+</div>
+<div class="content">
+	<h1>Folge bearbeiten</h1>
+
+	<%= render 'form' %>
+</div>

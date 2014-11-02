@@ -132,6 +132,8 @@ a span {
 	width: 100%;
 }
 
+.form-table textarea,
+.form-table select,
 .form-table input {
 	width: 100%;
 }
@@ -145,7 +147,7 @@ a span {
 	-moz-border-radius:25px;
 	-webkit-border-radius:25px;
 	border-radius:25px;
-	border:5px solid #29668f;
+	border:1px solid #333333;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -153,6 +155,7 @@ a span {
 	padding:5px 20px;
 	text-decoration:none;
 	text-shadow:0px 1px 10px #3d768a;
+	margin-bottom: 5px;
 }
 .button:hover {
 	background-color:#408c99;

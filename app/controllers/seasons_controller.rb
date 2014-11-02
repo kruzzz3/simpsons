@@ -1,5 +1,7 @@
 class SeasonsController < ApplicationController
 
+  before_filter :authenticate 
+
   # GET /seasons
   def index
     @seasons = Season.all
@@ -26,7 +28,7 @@ class SeasonsController < ApplicationController
     @season.number = params[:season][:number]
 
     if @season.save
-      redirect_to @season, notice: 'Staffel erfogreich erstellt'
+      redirect_to '/admin/seasons/' + @season.id.to_s, notice: 'Staffel erfogreich erstellt'
     else
       render action: 'new'
     end
@@ -38,22 +40,10 @@ class SeasonsController < ApplicationController
     @season.number = params[:season][:number]
 
     if @season.save
-      redirect_to @season, notice: 'Staffel erfogreich bearbeitet'
+      redirect_to '/admin/seasons/' + @season.id.to_s, notice: 'Staffel erfogreich bearbeitet'
     else
       render action: 'edit'
     end
   end
 
-  # DELETE /seasons/1
-  def destroy
-    @season = Season.find(params[:id])
-    @season.destroy
-    redirect_to seasons_url, notice: 'Staffel erfolgreich gelöscht'
-  end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_season
-      @season = Season.find(params[:id])
-    end
 end

@@ -1,0 +1,47 @@
+<%= form_for @episode do |f| %>
+  <% if @episode.errors.any? %>
+    <div class="error">
+      <h2><%= @episode.errors.count %> Fehler gefunden:</h2>
+
+      <ul>
+      <% @episode.errors.full_messages.each do |msg| %>
+        <li>- <%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="table form-table">
+    <tr>
+      <td>Staffel:</td>
+      <td class="max"><%= collection_select(:episode, :season_id, Season.all, :id, :number, {:selected => @episode.season_id, :prompt => 'Staffel wählen'}) %></td>
+    </tr>
+    <tr>
+      <td>Sort:</td>
+      <td class="max"><%= f.number_field :sort %></td>
+    </tr>
+    <tr>
+      <td>Nummer:</td>
+      <td class="max"><%= f.number_field :number %></td>
+    </tr>
+    <tr>
+      <td>Titel:</td>
+      <td class="max"><%= f.text_field :title %></td>
+    </tr>
+    <tr>
+      <td>Lead:</td>
+      <td class="max"><%= f.text_area :lead, :rows => "5" %></td>
+    </tr>
+    <tr>
+      <td>Beschreibung:</td>
+      <td class="max"><%= f.text_area :description, :rows => "5" %></td>
+    </tr>
+    <tr>
+      <td>Horrorfolge:</td>
+      <td class="max"><%= f.select :treehouseofhorror, [['Nein', false], ['Ja', true]] %></td>
+    </tr>
+  </table>
+  <div class="form-table-actions">
+    <%= f.submit "Speichern", :class => 'button' %>
+  </div>
+<% end %>

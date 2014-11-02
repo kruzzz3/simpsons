@@ -1,7 +1,7 @@
 class CreateEpisodes < ActiveRecord::Migration
   def change
     create_table :episodes do |t|
-    	t.belongs_to   :seasons
+    	t.belongs_to   :season
 
     	t.string       :title
      	t.integer      :number	# episode number over all episodes
