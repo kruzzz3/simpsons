@@ -16,6 +16,7 @@
 
 $(document).ready(function(){
     $('table.table').dataTable( {
+    	"bPaginate": false,
         "language": {
             "processing": "Bitte warten...",
 			"lengthMenu": "_MENU_ Einträge anzeigen",
