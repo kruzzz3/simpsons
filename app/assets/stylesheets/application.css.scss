@@ -129,7 +129,15 @@ a span {
 }
 
 .table td.max {
+	max-width: 500px;
 	width: 100%;
+    overflow: hidden;
+}
+
+.table td div.text-hidden {
+	max-width: 500px;
+    overflow: hidden;
+    width: 100%;
 }
 
 #table_sort_wrapper {

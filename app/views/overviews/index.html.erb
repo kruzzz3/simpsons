@@ -17,7 +17,7 @@
       <% @episodes.each do |episode| %>
         <tr>
           <td align="center"><%= episode.season.number %></td>
-          <td align="left" class="max"><%= episode.title %></td>
+          <td align="left" class="max"><div class="text-hidden"><%= episode.title %></div></td>
           <td align="center">1</td>
           <td align="center">
             <%= link_to(image_tag("icon_show_inv.png", :class => 'max'), '/overviews/' + episode.id.to_s) %>
