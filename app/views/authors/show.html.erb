@@ -1,0 +1,17 @@
+<div class="sub_navigation">
+	<%= link_to(image_tag("icon_back.png", :class => 'image-link') + raw('<span class="text">Zurück</span>'), '/admin/authors/') %>
+	<span class="spacer">|</span>
+	<%= link_to(image_tag("icon_edit.png", :class => 'image-link') + raw('<span class="text">Bearbeiten</span>'), '/admin/authors/' + @author.id.to_s + '/edit') %> 
+</div>
+<div class="content">
+	<h1>Autor</h1>
+
+	<% if notice %>
+		<p class="notice"><%= notice %></p>
+	<% end %>
+
+	<p>
+	  <strong> Name:</strong>
+	  <%= @author.name %>
+	</p>
+</div>

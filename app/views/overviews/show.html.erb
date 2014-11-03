@@ -1,0 +1,41 @@
+<div class="sub_navigation">
+	<%= link_to(image_tag("icon_back.png", :class => 'image-link') + raw('<span class="text">Zurück</span>'), '/overviews/') %>
+</div>
+<div class="content">
+	<h1>Folge</h1>
+
+	<% if notice %>
+		<p class="notice"><%= notice %></p>
+	<% end %>
+
+	<table class="table form-table">
+    <tr>
+      <td>Staffel:</td>
+      <td class="max"><%= @episode.season.number %></td>
+    </tr>
+    <tr>
+      <td>Sort:</td>
+      <td class="max"><%= @episode.sort %></td>
+    </tr>
+    <tr>
+      <td>Nummer:</td>
+      <td class="max"><%= @episode.number %></td>
+    </tr>
+    <tr>
+      <td>Titel:</td>
+      <td class="max"><%= @episode.title %></td>
+    </tr>
+    <tr>
+      <td>Lead:</td>
+      <td class="max"><%= simple_format @episode.lead %></td>
+    </tr>
+    <tr>
+      <td>Beschreibung:</td>
+      <td class="max"><%= simple_format @episode.description %></td>
+    </tr>
+    <tr>
+      <td>Horrorfolge:</td>
+      <td class="max"><%= ApplicationHelper.get_description_from_boolean(@episode.treehouseofhorror) %></td>
+    </tr>
+  </table>
+</div>

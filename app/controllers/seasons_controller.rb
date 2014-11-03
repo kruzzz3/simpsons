@@ -4,7 +4,8 @@ class SeasonsController < ApplicationController
 
   # GET /seasons
   def index
-    @seasons = Season.all
+    @seasons = Season.order("number ASC").all
+    @count = @seasons.size
   end
 
   # GET /seasons/1

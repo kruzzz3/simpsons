@@ -15,10 +15,24 @@ Simpsons::Application.routes.draw do
   get 'admin/episodes/:id', to: 'episodes#show'
   get 'admin/episodes/:id/edit', to: 'episodes#edit'
   patch 'admin/episodes/:id/update', to: 'episodes#update'
+
+  get 'admin/authors', to: 'authors#index'
+  get 'admin/authors/new', to: 'authors#new'
+  post 'admin/authors/new', to: 'authors#create'
+  get 'admin/authors/:id', to: 'authors#show'
+  get 'admin/authors/:id/edit', to: 'authors#edit'
+  patch 'admin/authors/:id/update', to: 'authors#update'
+
+  get 'admin/imports/new', to: 'imports#new'
+  post 'admin/imports/new', to: 'imports#create'
+
+  get 'overviews', to: 'overviews#index'
+  get 'overviews/:id', to: 'overviews#show'
   
-  root to: 'admins#index'
+  root to: 'overviews#index'
 
   resources :seasons
   resources :episodes
+  resources :authors
 
 end

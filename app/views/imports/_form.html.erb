@@ -1,0 +1,27 @@
+<%= form_for 'imports' do |f| %>
+  <% if @season.errors.any? %>
+    <div class="error">
+      <h2><%= @season.errors.count %> Fehler gefunden:</h2>
+
+      <ul>
+      <% @season.errors.full_messages.each do |msg| %>
+        <li>- <%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="table form-table">
+    <tr>
+      <td>Format:</td>
+      <td>Staffel;Folge;Sort;Titel;Beschreibung;TreehouseofHorror;</td>
+    </tr>
+    <tr>
+      <td>CSV:</td>
+      <td class="max"><%= f.text_area :csv, :rows => "10" %></td>
+    </tr>
+  </table>
+  <div class="form-table-actions">
+    <%= f.submit "Speichern", :class => 'button' %>
+  </div>
+<% end %>

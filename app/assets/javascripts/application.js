@@ -12,3 +12,26 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.dataTables.min
+
+$(document).ready(function(){
+    $('table.table').dataTable( {
+        "language": {
+            "processing": "Bitte warten...",
+			"lengthMenu": "_MENU_ Einträge anzeigen",
+			"zeroRecords": "Keine Einträge vorhanden.",
+			"info": "_START_ bis _END_ von _TOTAL_",
+			"infoEmpty": "0 bis 0 von 0 Einträgen",
+			"infoFiltered": "",
+			"infoPostFix": "",
+			"search": "Suchen",
+			"url": "",
+			"paginate": {
+				"first": "",
+				"previous": "<",
+				"next": ">",
+				"last": ""
+			}
+        }
+    } );
+});
