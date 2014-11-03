@@ -2,7 +2,7 @@
 	<%= link_to(image_tag("icon_back.png", :class => 'image-link') + raw('<span class="text">Zurück</span>'), '/overviews/') %>
 </div>
 <div class="content">
-	<h1>Folge</h1>
+	<h1>Folge <%= @episode.number %></h1>
 
 	<% if notice %>
 		<p class="notice"><%= notice %></p>

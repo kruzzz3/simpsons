@@ -144,11 +144,21 @@ a span {
 	width: 100%;
 }
 
+#table_sort_filter label input{
+	margin-left: 5px;
+}
+
+#table_sort_filter {
+	margin-bottom: 10px;
+}
+
 .form-table textarea,
 .form-table select,
 .form-table input {
 	width: 100%;
 }
+
+
 
 .form-table-actions {
 	margin-top: 20px;

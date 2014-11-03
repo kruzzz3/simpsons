@@ -7,16 +7,16 @@
   <table id="table_sort" class="table">
     <thead>
       <tr class="title">
-        <td align="center"></td>
+        <td align="center">Nr</td>
         <td align="left">Titel</td>
-        <td align="center">Rate</td>
+        <td align="center">Ø</td>
         <td align="center"></td>
       </tr>
     </thead>
     <tbody>
       <% @episodes.each do |episode| %>
         <tr>
-          <td align="center"><%= episode.season.number %></td>
+          <td align="center"><%= episode.number %></td>
           <td align="left" class="max"><div class="text-hidden"><%= episode.title %></div></td>
           <td align="center">1</td>
           <td align="center">
