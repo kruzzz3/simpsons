@@ -1,30 +1,8 @@
 <div class="sub_navigation">
-  <%= link_to(image_tag("icon_back.png", :class => 'image-link') + raw('<span class="text">Zurück</span>'), '/') %>
+  <span class="text">Übersicht</span>
 </div>
 <div class="content">
-  <h1>Alle Folgen [<%= @count %>]</h1>
-
-  <table id="table_sort" class="table">
-    <thead>
-      <tr class="title">
-        <td align="center">Nr</td>
-        <td align="left">Titel</td>
-        <td align="center">Ø</td>
-        <td align="center"></td>
-      </tr>
-    </thead>
-    <tbody>
-      <% @episodes.each do |episode| %>
-        <tr>
-          <td align="center"><%= episode.number %></td>
-          <td align="left" class="max"><div class="text-hidden"><%= episode.title %></div></td>
-          <td align="center">1</td>
-          <td align="center">
-            <%= link_to(image_tag("icon_show_inv.png", :class => 'max'), '/overviews/' + episode.id.to_s) %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <a href="/rates"><div id="rate"><h3 class="text">Bewerten</h3></div></a>
+  <a href="/searchs"><div id="search"><h3 class="text">Suchen</h3></div></a>
 
 </div>

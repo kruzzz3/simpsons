@@ -27,12 +27,19 @@ Simpsons::Application.routes.draw do
   post 'admin/imports/new', to: 'imports#create'
 
   get 'overviews', to: 'overviews#index'
-  get 'overviews/:id', to: 'overviews#show'
+
+  get 'overview_episodes', to: 'overview_episodes#index'
+  get 'overview_episodes/:id', to: 'overview_episodes#show'
   
+  get 'rates', to: 'rates#index'
+  get 'rates/new', to: 'rates#new'
+  post 'rates/new', to: 'rates#create'
+
   root to: 'overviews#index'
 
   resources :seasons
   resources :episodes
   resources :authors
+  resources :rates
 
 end

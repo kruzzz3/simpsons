@@ -1,10 +1,12 @@
 <div class="sub_navigation">
-  <%= link_to(image_tag("icon_back.png", :class => 'image-link') + raw('<span class="text">Zurück</span>'), '/admin') %>
-  <span class="spacer">|</span>
-  <%= link_to(image_tag("icon_new.png", :class => 'image-link') + raw('<span class="text">Neue Folge</span>'), '/admin/episodes/new') %>
+  <%= link_to(image_tag("icon_back.png", :class => 'image-link') + raw('<span class="text">Zurück</span>'), '/') %>
 </div>
 <div class="content">
   <h1>Alle Folgen [<%= @count %>]</h1>
+
+  <% if notice %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
 
   <table class="table">
     <thead>
@@ -13,7 +15,6 @@
         <td align="left">E</td>
         <td align="left">N</td>
         <td align="left">Titel</td>
-        <td align="center"></td>
         <td align="center"></td>
       </tr>
     </thead>
@@ -25,10 +26,7 @@
           <td align="left"><%= episode.number %></td>
           <td align="left" class="max"><%= episode.title %></td>
           <td align="center">
-            <%= link_to(image_tag("icon_show_inv.png", :class => 'max'), '/admin/episodes/' + episode.id.to_s) %>
-          </td>
-          <td align="center">
-            <%= link_to(image_tag("icon_edit_inv.png", :class => 'max'), '/admin/episodes/' + episode.id.to_s + '/edit') %>
+            <%= link_to(image_tag("icon_show_inv.png", :class => 'max'), '/rates/new?id=' + episode.id.to_s) %>
           </td>
         </tr>
       <% end %>

@@ -150,12 +150,10 @@ a span {
 	width: 100%;
 }
 
-#table_sort_filter label input{
+label input{
 	margin-left: 5px;
-}
-
-#table_sort_filter {
 	margin-bottom: 10px;
+	font-size: 20px;
 }
 
 .form-table textarea,
@@ -191,4 +189,26 @@ a span {
 .button:active {
 	position:relative;
 	top:1px;
+}
+
+#search,
+#rate {
+	width: 200px;
+	height: 200px;
+	background-color:#599bb3;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+	border-radius:25px;
+	border:1px solid #333333;
+	margin:auto;
+	margin-bottom:50px;
+}
+
+#search h3,
+#rate h3{
+	width: 100%;
+	line-height: 200px;
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 24px;
 }

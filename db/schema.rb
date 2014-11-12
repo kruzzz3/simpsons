@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20141102160424) do
   end
 
   create_table "rates", force: true do |t|
-    t.integer  "episodes_id"
+    t.integer  "episode_id"
     t.decimal  "value"
     t.integer  "author"
     t.datetime "created_at"
