@@ -211,11 +211,18 @@ label input{
 	top:1px;
 }
 
-.bottom_banner {
+.top_banner {
 	width:100%;
 }
 
-#rand_7 {
+.bottom_banner {
+	width:100%;
+	position:absolute;
+	bottom:0;
+}
+
+#rand_7,
+#search {
 	width: 100%;
 	border-top:1px solid $color-dark;
 	border-bottom:1px solid $color-dark;

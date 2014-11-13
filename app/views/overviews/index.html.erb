@@ -1,5 +1,5 @@
 <div class="bg"></div>
-<div class="bottom_banner">
+<div class="top_banner">
 	<a href="/rates/">
 		<div id="rate">
 			<%= image_tag("icon_rate_inv.png", :class => 'image-link') + raw('<span class="text-inv">Bewerten</span>') %>
@@ -10,14 +10,16 @@
 			<%= image_tag("icon_show_inv.png", :class => 'image-link') + raw('<span class="text-inv">Suchen</span>') %>
 		</div>
 	</a>
-	<a href="/overview_episodes/default/rand">
-		<div id="rand_d">
-			<%= image_tag("icon_show_inv.png", :class => 'image-link') + raw('<span class="text-inv">Zufällige Folge</span>') %>
-		</div>
-	</a>
-	<a href="/overview_episodes/default/rand?rate=7">
-		<div id="rand_7">
-			<%= image_tag("icon_show_inv.png", :class => 'image-link') + raw('<span class="text-inv">Zufällige Folge [Rate > 7]</span>') %>
-		</div>
-	</a>
+	<div class="bottom_banner">
+		<a href="/overview_episodes/default/rand">
+			<div id="rand_d">
+				<%= image_tag("icon_show_inv.png", :class => 'image-link') + raw('<span class="text-inv">Zufällige Folge</span>') %>
+			</div>
+		</a>
+		<a href="/overview_episodes/default/rand?rate=7">
+			<div id="rand_7">
+				<%= image_tag("icon_show_inv.png", :class => 'image-link') + raw('<span class="text-inv">Zufällige Folge [Rate > 7]</span>') %>
+			</div>
+		</a>
+	</div>
 </div>
