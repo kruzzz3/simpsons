@@ -159,7 +159,7 @@ a span {
 	padding: 2px;
 }
 
-.table td.max {
+table td.max {
 	max-width: 500px;
 	width: 100%;
     overflow: hidden;
@@ -215,14 +215,14 @@ label input{
 	width:100%;
 }
 
-#search,
-#rand_d,
 #rand_7 {
 	width: 100%;
 	border-top:1px solid $color-dark;
 	border-bottom:1px solid $color-dark;
 }
-#rate {
+#rate,
+#search,
+#rand_d {
 	width: 100%;
 	border-top:1px solid $color-dark;
 }

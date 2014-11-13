@@ -5,7 +5,7 @@
   <h1>Alle Folgen [<%= @count %>]</h1>
 
   <%= form_for("searchs", method: "get") do |f| %>
-  <table class="table">
+  <table class="form-table">
     <tr>
       <td>Min.Bewertung:</td>
       <td class="max"><%= f.select :value_min, options_for_select((1..10).step(0.5).to_a.map{|s| ["#{s}", s]}, :selected => @value_min ) %></td>
@@ -18,7 +18,7 @@
   <%= f.submit "Filtern", :class => 'button' %>
   <% end %>
 
-  <table id="table_sort" class="table">
+  <table class="table">
     <thead>
       <tr class="title">
         <td align="center">N</td>
