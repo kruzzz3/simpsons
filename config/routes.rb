@@ -30,6 +30,7 @@ Simpsons::Application.routes.draw do
 
   get 'overview_episodes', to: 'overview_episodes#index'
   get 'overview_episodes/:id', to: 'overview_episodes#show'
+  get 'overview_episodes/default/rand', to: 'overview_episodes#rand'
   
   get 'rates', to: 'rates#index'
   get 'rates/new', to: 'rates#new'

@@ -215,7 +215,9 @@ label input{
 	width:100%;
 }
 
-#search {
+#search,
+#rand_d,
+#rand_7 {
 	width: 100%;
 	border-top:1px solid $color-dark;
 	border-bottom:1px solid $color-dark;
@@ -226,19 +228,25 @@ label input{
 }
 
 #search,
-#rate{
+#rate,
+#rand_d,
+#rand_7, {
 	width: 100%;
 	line-height: 50px;
 	text-align: center;
 }
 
 #search span,
-#rate span {
+#rate span,
+#rand_d span,
+#rand_7 span, {
 	font-size: 22px;
 }
 
 #search img,
-#rate img {
+#rate img,
+#rand_d img,
+#rand_7 img, {
 	height: 20px;
 	margin-top: 4px;
 	margin-right: 6px;

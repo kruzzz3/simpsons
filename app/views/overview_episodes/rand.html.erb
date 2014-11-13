@@ -26,5 +26,9 @@
       <td class="max"><%= @episode.rates.maximum(:value).to_f.to_s %></td>
     </tr>
   </table>
+
+  <div class="form-table-actions">
+    <%= button_to_function("Refresh", "location.reload()", class: 'button') %>
+  </div>
 </div>
 
