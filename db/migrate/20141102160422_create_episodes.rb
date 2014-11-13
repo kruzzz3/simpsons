@@ -8,7 +8,6 @@ class CreateEpisodes < ActiveRecord::Migration
      	t.integer	   :sort	# episode number over the season
      	t.boolean      :treehouseofhorror
      	t.text		   :lead
-     	t.text		   :description
 
      	t.timestamps
     end

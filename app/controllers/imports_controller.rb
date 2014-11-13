@@ -14,7 +14,7 @@ class ImportsController < ApplicationController
     episodes = csv.split("\n")
 
     episodes.each do |episode|
-      #Staffel;Folge;Sort;Titel;Beschreibung;TreehouseofHorror;
+      #Staffel;Folge;Sort;Titel;Beschreibung;TreehouseofHorror;Bewertung
       data = episode.split(";")
 
       create_season(data[0].to_i)
@@ -53,6 +53,15 @@ class ImportsController < ApplicationController
     episode.treehouseofhorror = treehouseofhorror
     episode.lead = data[4].to_s
     episode.save
+
+    rate = Rate.find_by_episode_id(episode.id)
+    if !rate
+      rate = Rate.new
+    end
+    rate.value = data[6].to_f
+    rate.author = 1
+    rate.episode_id = episode.id
+    rate.save
   end
 
 end

@@ -1,5 +1,5 @@
 <div class="sub_navigation">
-  <%= link_to(image_tag("icon_back.png", :class => 'image-link') + raw('<span class="text">Zurück</span>'), '/') %>
+  <%= link_to_function(image_tag("icon_back_inv.png", :class => 'image-link') + raw('<span class="text-inv">Zurück</span>'), "history.back()") %>
 </div>
 <div class="content">
   <h1>Alle Folgen [<%= @count %>]</h1>
@@ -26,7 +26,7 @@
           <td align="left"><%= episode.number %></td>
           <td align="left" class="max"><%= episode.title %></td>
           <td align="center">
-            <%= link_to(image_tag("icon_show_inv.png", :class => 'max'), '/rates/new?id=' + episode.id.to_s) %>
+            <%= link_to(image_tag("icon_rate.png", :class => 'max'), '/rates/new?id=' + episode.id.to_s) %>
           </td>
         </tr>
       <% end %>

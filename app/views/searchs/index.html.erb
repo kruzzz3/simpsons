@@ -1,29 +1,40 @@
 <div class="sub_navigation">
-  <%= link_to(image_tag("icon_back.png", :class => 'image-link') + raw('<span class="text">Zurück</span>'), '/admin') %>
-  <span class="spacer">|</span>
-  <%= link_to(image_tag("icon_new.png", :class => 'image-link') + raw('<span class="text">Neuer Autor</span>'), '/admin/authors/new') %>
+  <%= link_to_function(image_tag("icon_back_inv.png", :class => 'image-link') + raw('<span class="text-inv">Zurück</span>'), "history.back()") %>
 </div>
 <div class="content">
-  <h1>Alle Autoren [<%= @count %>]</h1>
+  <h1>Alle Folgen [<%= @count %>]</h1>
 
+  <%= form_for("searchs", method: "get") do |f| %>
   <table class="table">
+    <tr>
+      <td>Min.Bewertung:</td>
+      <td class="max"><%= f.select :value_min, options_for_select((1..10).step(0.5).to_a.map{|s| ["#{s}", s]}, :selected => @value_min ) %></td>
+    </tr>
+    <tr>
+      <td>Max.Bewertung:</td>
+      <td class="max"><%= f.select :value_max, options_for_select((1..10).step(0.5).to_a.map{|s| ["#{s}", s]}, :selected => @value_max ) %></td>
+    </tr>
+  </table>
+  <%= f.submit "Filtern", :class => 'button' %>
+  <% end %>
+
+  <table id="table_sort" class="table">
     <thead>
       <tr class="title">
-        <td align="left">Name</td>
-        <td align="center"></td>
+        <td align="center">N</td>
+        <td align="left">Titel</td>
+        <td align="center">Ø</td>
         <td align="center"></td>
       </tr>
     </thead>
-
     <tbody>
-      <% @authors.each do |author| %>
+      <% @episodes.each do |episode| %>
         <tr>
-          <td align="left" class="max"><%= author.name %></td>
+          <td align="center"><%= episode.number %></td>
+          <td align="left" class="max"><div class="text-hidden"><%= episode.title %></div></td>
+          <td align="center"><%= episode.rates.average(:value).to_f.to_s %></td>
           <td align="center">
-            <%= link_to(image_tag("icon_show_inv.png", :class => 'max'), '/admin/authors/' + author.id.to_s) %>
-          </td>
-          <td align="center">
-            <%= link_to(image_tag("icon_edit_inv.png", :class => 'max'), '/admin/authors/' + author.id.to_s + '/edit') %>
+            <%= link_to(image_tag("icon_show_inv.png", :class => 'max'), '/overview_episodes/' + episode.id.to_s) %>
           </td>
         </tr>
       <% end %>

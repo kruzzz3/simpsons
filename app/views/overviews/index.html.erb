@@ -1,8 +1,13 @@
-<div class="sub_navigation">
-  <span class="text">Übersicht</span>
-</div>
-<div class="content">
-  <a href="/rates"><div id="rate"><h3 class="text">Bewerten</h3></div></a>
-  <a href="/searchs"><div id="search"><h3 class="text">Suchen</h3></div></a>
-
+<div class="bg"></div>
+<div class="bottom_banner">
+	<a href="/rates/">
+		<div id="rate">
+			<%= image_tag("icon_rate_inv.png", :class => 'image-link') + raw('<span class="text-inv">Bewerten</span>') %>
+		</div>
+	</a>
+	<a href="/searchs/">
+		<div id="search">
+			<%= image_tag("icon_show_inv.png", :class => 'image-link') + raw('<span class="text-inv">Suchen</span>') %>
+		</div>
+	</a>
 </div>

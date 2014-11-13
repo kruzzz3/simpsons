@@ -5,7 +5,7 @@
 
       <ul>
       <% @season.errors.full_messages.each do |msg| %>
-        <li>- <%= msg %></li>
+        <li>- <%= ApplicationHelper.get_error_message(msg) %></li>
       <% end %>
       </ul>
     </div>
@@ -14,7 +14,7 @@
   <table class="table form-table">
     <tr>
       <td>Format:</td>
-      <td>Staffel;Folge;Sort;Titel;Beschreibung;TreehouseofHorror;</td>
+      <td>Staffel;Folge;Sort;Titel;Beschreibung;TreehouseofHorror;Bewertung;</td>
     </tr>
     <tr>
       <td>CSV:</td>

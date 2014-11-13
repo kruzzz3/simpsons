@@ -5,7 +5,7 @@
 
       <ul>
       <% @season.errors.full_messages.each do |msg| %>
-        <li>- <%= msg %></li>
+        <li>- <%= ApplicationHelper.get_error_message(msg) %></li>
       <% end %>
       </ul>
     </div>

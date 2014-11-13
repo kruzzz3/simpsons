@@ -35,6 +35,8 @@ Simpsons::Application.routes.draw do
   get 'rates/new', to: 'rates#new'
   post 'rates/new', to: 'rates#create'
 
+  get 'searchs', to: 'searchs#index'
+
   root to: 'overviews#index'
 
   resources :seasons

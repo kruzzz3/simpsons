@@ -1,7 +1,7 @@
 <div class="sub_navigation">
-	<%= link_to(image_tag("icon_back.png", :class => 'image-link') + raw('<span class="text">Zurück</span>'), '/admin/episodes/') %>
+	<%= link_to(image_tag("icon_back_inv.png", :class => 'image-link') + raw('<span class="text-inv">Zurück</span>'), '/admin/episodes/') %>
 	<span class="spacer">|</span>
-	<%= link_to(image_tag("icon_edit.png", :class => 'image-link') + raw('<span class="text">Bearbeiten</span>'), '/admin/episodes/' + @episode.id.to_s + '/edit') %> 
+	<%= link_to(image_tag("icon_edit_inv.png", :class => 'image-link') + raw('<span class="text-inv">Bearbeiten</span>'), '/admin/episodes/' + @episode.id.to_s + '/edit') %> 
 </div>
 <div class="content">
 	<h1>Folge</h1>
@@ -32,12 +32,20 @@
       <td class="max"><%= simple_format @episode.lead %></td>
     </tr>
     <tr>
-      <td>Beschreibung:</td>
-      <td class="max"><%= simple_format @episode.description %></td>
-    </tr>
-    <tr>
       <td>Horrorfolge:</td>
       <td class="max"><%= ApplicationHelper.get_description_from_boolean(@episode.treehouseofhorror) %></td>
+    </tr>
+    <tr>
+      <td>Min.Bewertung:</td>
+      <td class="max"><%= @episode.rates.minimum(:value).to_f.to_s %></td>
+    </tr>
+    <tr>
+      <td>Avg.Bewertung:</td>
+      <td class="max"><%= @episode.rates.average(:value).to_f.to_s %></td>
+    </tr>
+    <tr>
+      <td>Max.Bewertung:</td>
+      <td class="max"><%= @episode.rates.maximum(:value).to_f.to_s %></td>
     </tr>
   </table>
 </div>

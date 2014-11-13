@@ -23,7 +23,7 @@ class RatesController < ApplicationController
     @rate.value = params[:rate][:value]
 
     if @rate.save
-      redirect_to '/rates/', notice: 'Folge erfogreich bewertet'
+      redirect_to '/rates/', notice: 'Folge ' + @episode.number.to_s + ' erfogreich mit ' + params[:rate][:value] + ' bewertet'
     else
       render action: 'new', :id => params[:rate][:episode_id].to_s
     end

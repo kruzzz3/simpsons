@@ -13,4 +13,9 @@ module ApplicationHelper
 
 		return "S" + season.to_s + "E" + episode.to_s
 	end
+
+	def self.get_error_message(msg)
+		msg.gsub!(/\A\S+\s+/, "")
+		return msg
+	end
 end
